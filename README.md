@@ -1,2 +1,0 @@
-# Rating
- Exercisi Rating

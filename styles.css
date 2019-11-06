@@ -1,0 +1,38 @@
+body {
+    overflow: hidden; /* no se dibujan barras */
+    background-color: #f062a4;
+}
+
+.center { /* Centramos contenido en pantalla */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    float: right;
+    font-size: 0;
+    color: #fff;
+    margin: 10px;
+}
+
+label::before { /*lo que tendra el elemento antes de que aparezca en pantalla*/ 
+    content: "\f6e2";
+    font-family: 'Font Awesome 5 free';
+    font-size: 200px;
+    font-weight: 900;
+}
+
+label:hover,  label:hover~label {
+    color: #000000;
+    transition: 0.8s;
+    font-weight: 900;
+}
+
+.active {
+    color: #000000;
+    font-weight: 900;
+}
