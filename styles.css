@@ -16,19 +16,19 @@ label {
     float: right;
     font-size: 0;
     color: #fff;
-    margin: 10px;
+    margin: 5px;
 }
 
 label::before { /*lo que tendra el elemento antes de que aparezca en pantalla*/ 
-    content: "\f6e2";
+    content: "\f619";
     font-family: 'Font Awesome 5 free';
-    font-size: 200px;
+    font-size: 150px;
     font-weight: 900;
 }
 
 label:hover,  label:hover~label {
     color: #000000;
-    transition: 0.8s;
+    transition: 1s;
     font-weight: 900;
 }
 
