@@ -1,14 +1,22 @@
-var x = 1;
-if (x == 1) {
-    function demo1(x) {
-        return x*2;
-    }
+function rate(value) {
+    clearRates(); //vacia clase active
+    addRates(value); //añade clase active
 }
-else {
-    function demo1(x) {
-        return x*10;
+
+function clearRates() { //primer paso limpiar todos los rates
+    for (var i=1; i<=5; i++) {
+        document.getElementById("star" +i).classList.remove("active");
     }
 }
 
-x = demo1(3);
-document.writeln(x);
+function addRates(value) { //despues de limpiar, pongo los active nuevos
+    for(var i=1; i<=value; i++) {
+        document.getElementById("star" +i).classList.add("active");
+    }
+}
+
+window.addEventListener("click", function(e) { //capturo cualquier click en cualquier sitio "e" es el nombre argument
+    if(!document.getElementById("rate").contains(e.target)) { //si el click NO está dentro del div, limpiar todo
+        clearRates();
+    }
+})
